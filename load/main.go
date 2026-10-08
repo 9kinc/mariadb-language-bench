@@ -95,8 +95,7 @@ func main(){
  data,err:=json.MarshalIndent(res,"","  ");if err!=nil{panic(err)}
  fmt.Println(string(data))
  if *output!="" {
-  if err=os.WriteFile(*output,append(data,'
-'),0644);err!=nil {panic(err)}
+  if err=os.WriteFile(*output,append(data, byte(10)),0644);err!=nil {panic(err)}
  }
  if successes==0 {os.Exit(1)}
 }
