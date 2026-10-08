@@ -1,0 +1,6 @@
+__pycache__/
+results/
+bin/
+target/
+node_modules/
+*.log
